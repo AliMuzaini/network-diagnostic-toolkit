@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "network-diagnostic-toolkit"
+version = "0.1.0"
+description = "A lightweight cross-platform network troubleshooting toolkit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Ali Muzaini" }
+]
+keywords = [
+  "networking",
+  "diagnostics",
+  "troubleshooting",
+  "ping",
+  "dns",
+  "traceroute",
+  "tcp",
+  "sysadmin"
+]
+
+[project.scripts]
+netdiag = "src.netdiag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
